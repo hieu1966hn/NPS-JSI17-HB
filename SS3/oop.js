@@ -26,7 +26,6 @@ OOP là gì: Lập trình hướng đối tượng.
 // console.log(LeAnh.address); //?
 // console.log(LeAnh.cccd); //?
 
-
 /*
 Bài 1: Khởi tạo kiểu dữ liệu hình tròn. Biết rằng hình tròn có thuộc tính:  bán kính hình tròn
 Xây dựng phương thức trong KDL (class) hình tròn như sau:
@@ -45,7 +44,7 @@ class HinhTron {
   }
 
   cvht() {
-    return PI * this.banKinh * 2
+    return PI * this.banKinh * 2;
   }
 }
 
@@ -57,7 +56,6 @@ class HinhTron {
 //   "Chu vi hình tròn:", HinhTron1.cvht()
 // );
 
-
 /*
 Bài 2: Khởi tạo KDL hình chữ nhật
 Biết rằng hình CN có thuộc tính truyền vào là: chiều dài, chiều rộng
@@ -68,14 +66,15 @@ Xây dưng phương thức trong KDL HCN như sau:
 
 class HinhChuNhat {
   constructor(_chieuDai, _chieuRong) {
-
+    this.chieuDai = _chieuDai;
+    this.chieuRong = _chieuRong;
   }
 
   cvhcn() {
-    return
+    return (this.chieuDai + this.chieuRong) * 2;
   }
 
   dthcn() {
-    return
+    return this.chieuDai * this.chieuDai;
   }
 }
