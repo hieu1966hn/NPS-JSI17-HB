@@ -66,49 +66,43 @@
 
 ///////////// Phương thức set(), get(): Để định nghĩa getter & setter cho thuộc tính của 1 đối tượng.
 class Nguoi {
-    constructor(ten, tuoi) {
-      this._ten = ten; /// private thuộc tính của class Người.
-      this._tuoi = tuoi;
-    }
-  
-    // Getter cho thuộc tính "ten": Trả về giá trị thuộc tính của class đó => Dùng để lấy ra thuộc tính
-    get ten() {
-      return this._ten;
-    }
-  
-    // Setter cho thuộc tính "ten": => Dùng để đặt lại giá trị thuộc tính trong class
-    set ten(tenMoi) {
-      this._ten = tenMoi;
-    }
-  
-    // Getter cho thuộc tính "tuoi"
-    get tuoi() {
-      return this._tuoi;
-    }
-  
-    // Setter cho thuộc tính "tuoi"
-    set tuoi(tuoiMoi) {
-      if (tuoiMoi == parseInt(tuoiMoi)) {
-        if (tuoiMoi > 0) {
-          this._tuoi = tuoiMoi;
-        } else {
-          console.log("Tuổi mới phải là một số nguyên dương");
-        }
+  constructor(ten, tuoi) {
+    this._ten = ten; /// private thuộc tính của class Người.
+    this._tuoi = tuoi;
+  }
+
+  // Getter cho thuộc tính "ten": Trả về giá trị thuộc tính của class đó => Dùng để lấy ra thuộc tính
+  get ten() {
+    return this._ten;
+  }
+
+  // Setter cho thuộc tính "ten": => Dùng để đặt lại giá trị thuộc tính trong class
+  set ten(tenMoi) {
+    this._ten = tenMoi;
+  }
+
+  // Getter cho thuộc tính "tuoi"
+  get tuoi() {
+    return this._tuoi;
+  }
+
+  // Setter cho thuộc tính "tuoi"
+  set tuoi(tuoiMoi) {
+    if (tuoiMoi == parseInt(tuoiMoi)) {
+      if (tuoiMoi > 0) {
+        this._tuoi = tuoiMoi;
       } else {
-        console.log("Tuổi mới phải là một số nguyên");
+        console.log("Tuổi mới phải là một số nguyên dương");
       }
+    } else {
+      console.log("Tuổi mới phải là một số nguyên");
     }
   }
-  
+}
+
 //   // Sử dụng class Nguoi vừa khai báo
-  let Hieu = new Nguoi("Hieu", 30);
-  
-  
-  console.log(Hieu._ten);///// 
-//   console.log(Hieu.tuoi);
+let Hieu = new Nguoi("Hieu", 30);
 
 // // Chạy hàm set tên để đặt lại giá trị tên
-// Hieu.ten = ("Trung Hiếu");
-// console.log(Hieu.ten);
-  
-  
+Hieu._ten = "Trung Hiếu";
+console.log(Hieu._ten);
