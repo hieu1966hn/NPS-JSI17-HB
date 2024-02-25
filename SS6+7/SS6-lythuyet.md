@@ -17,3 +17,6 @@ Nền tảng Firebase:
 Bước 1: Truy cập trang chủ của Firebase
 Bước 2: Kích hoạt công cụ Authentication
 Bước 3: Xây dựng giao diện trang đăng ký
+
+
+
