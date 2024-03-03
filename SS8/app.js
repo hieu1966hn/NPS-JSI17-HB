@@ -77,7 +77,7 @@ const deleteTask = (id) => {
   deleteDoc(docRef)
     .then(() => {
       console.log("Toàn bộ document đã bị xóa thành công");
-      getDocs(); //// lấy dữ liệu mới nhất từ database về web
+      getTasks(); //// lấy dữ liệu mới nhất từ database về web
     })
     .catch((error) => {
       console.log(error);
